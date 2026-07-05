@@ -1,3 +1,17 @@
+#######################################################################
+#
+#   Purpose:    This program serves as the board for the game
+#
+#   Author:     William Hall
+#
+#   Date:       Jul 5, 2026
+#
+#   Version:    0.0.1
+#
+######################################################################
+
+import pieces
+
 class Board:
     def __init__(self):
         self.grid = []
