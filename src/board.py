@@ -1,12 +1,13 @@
 #######################################################################
 #
-#   Purpose:    This program serves as the board for the game
+#   Purpose:    This program serves as the board for the game and
+#               preserves state changes
 #
 #   Author:     William Hall
 #
 #   Date:       Jul 5, 2026
 #
-#   Version:    0.0.1
+#   Version:    0.0.3
 #
 ######################################################################
 
@@ -96,8 +97,50 @@ class Board:
                         end_row,
                         end_col,
                     )
-
-
-#   TODO: KING
+        
         else:
             return False
+        
+
+
+#   CHECK DETECTION
+
+    def is_in_check(self, color):
+        king_row = None
+        king_col = None
+
+        #  1. Determine the color of the piece
+
+        for row in range(8):
+            for col in range(8):
+                piece = self.grid[row][col]
+
+                if color == 'white' and piece == 'K':
+                    king_row = row
+                    king_col = col
+
+                elif color == 'black' and piece == 'k':
+                    king_row = row
+                    king_col = col
+
+        if king_row is None:
+            return False
+
+        #   2. Identify possible attackers
+
+        for row in range(8):
+            for col in range(8):
+                piece = self.grid[row][col]
+
+                if piece == '.':
+                    continue
+
+                if color == 'white' and piece.islower():
+                    if self.is_valid_move(row, col, king_row, king_col):
+                        return True
+                
+                elif color == 'black' and piece.isupper():
+                    if self.is_valid_move(row, col, king_row, king_col):
+                        return True
+                    
+        return False

@@ -1,12 +1,13 @@
 ######################################################################
 #
-#   Purpose:    This program serves as the rule library for the game
+#   Purpose:    This program contains move validation functions for
+#               for each piece
 #
 #   Author:     William Hall
 #
 #   Date:       July 5, 2026
 #
-#   Version:    0.0.0
+#   Version:    0.0.4
 #
 ######################################################################
 
@@ -201,9 +202,6 @@ def is_valid_king_move(board, start_row, start_col, end_row, end_col):
      
     return False
 
-
-
-        
      
 #   HELPERS
 
