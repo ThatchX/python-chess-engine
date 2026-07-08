@@ -43,4 +43,61 @@ class Board:
             self.grid[end_row][end_col] = piece
 
     def is_valid_move(self, start_row, start_col, end_row, end_col):
-        return True
+        piece = self.grid[start_row][start_col]
+
+        if piece == '.':
+            return False
+
+        if piece.upper() == 'P':
+            return pieces.is_valid_pawn_move(
+                self,
+                start_row,
+                start_col,
+                end_row,
+                end_col,
+            )
+        elif piece.upper() == 'R':
+            return pieces.is_valid_rook_move(
+                self,
+                start_row,
+                start_col,
+                end_row,
+                end_col,
+            )
+        elif piece.upper() == 'N':
+                    return pieces.is_valid_knight_move(
+                        self,
+                        start_row,
+                        start_col,
+                        end_row,
+                        end_col,
+                    )
+        elif piece.upper() == 'B':
+                    return pieces.is_valid_bishop_move(
+                        self,
+                        start_row,
+                        start_col,
+                        end_row,
+                        end_col,
+                    )
+        elif piece.upper() == 'Q':
+                    return pieces.is_valid_queen_move(
+                        self,
+                        start_row,
+                        start_col,
+                        end_row,
+                        end_col,
+                    )
+        elif piece.upper() == 'K':
+                    return pieces.is_valid_king_move(
+                        self,
+                        start_row,
+                        start_col,
+                        end_row,
+                        end_col,
+                    )
+
+
+#   TODO: KING
+        else:
+            return False

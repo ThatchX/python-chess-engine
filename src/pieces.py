@@ -185,8 +185,22 @@ def is_valid_queen_move(board, start_row, start_col, end_row, end_col):
     ):
         return True
     
-    return False
+
+def is_valid_king_move(board, start_row, start_col, end_row, end_col):
+    piece = board.grid[start_row][start_col]
+    target = board.grid[end_row][end_col]
+
+    row_change = abs(end_row - start_row)
+    col_change = abs(end_col - start_col)
+
+    if row_change == 0 and col_change == 0:
+        return False
     
+    if row_change <= 1 and col_change <= 1:
+        return True
+     
+    return False
+
 
 
         
@@ -203,13 +217,8 @@ def is_enemy(piece, target):
 def is_valid_destination (piece, target):
     return target == '.' or is_enemy(piece, target)
 
-#   TODO
 
-#   TODO:   BISHOP
-#   TODO:   QUEEN
-#   TODO:   KING
 
-#   TODO:   Write is_path_clear(board, start_row, start_col, end_row, end_col)
-#   TODO:   Write is_enemy_piece
-#   TODO:   Write is_valid_destination
+
+
 
