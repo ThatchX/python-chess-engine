@@ -1,4 +1,4 @@
-##Python Chess Engine ♟️
+Python Chess Engine ♟️
 
 A chess engine written entirely in Python as a personal learning project for Programming I.
 
@@ -6,7 +6,7 @@ The objective of this project is to build a complete chess engine from scratch w
 
 ⸻
 
-##Features
+Features
 
 Board
 
@@ -15,7 +15,7 @@ Board
 * Terminal board display
 * Piece movement
 
-##Piece Movement
+Piece Movement
 
 * ✅ Pawn
 * ✅ Rook
@@ -26,20 +26,20 @@ Board
 
 Each piece has its own movement validation function contained within pieces.py.
 
-##Game Logic
+Game Logic
 
 * Move validation
 * Check detection
 * Board rule enforcement
 
-##Testing
+Testing
 
 * Dedicated board testing file
 * Easily expandable test suite for future development
 
 ⸻
 
-##Project Structure
+Project Structure
 
 src/
 │
@@ -51,7 +51,7 @@ src/
 
 ⸻
 
-##Current Progress
+Current Progress
 
 Completed
 
@@ -63,11 +63,11 @@ Completed
 * GitHub version control
 * Basic testing framework
 
-##In Progress
+In Progress
 
 * Prevent illegal moves that leave the king in check
 
-##Planned Features
+Planned Features
 
 * Checkmate detection
 * Stalemate detection
@@ -82,7 +82,7 @@ Completed
 
 ⸻
 
-##Technologies
+Technologies
 
 * Python
 * Git
@@ -91,7 +91,7 @@ Completed
 
 ⸻
 
-##Purpose
+Purpose
 
 This project is intended as an educational exercise to strengthen understanding of:
 
